@@ -1,0 +1,52 @@
+[tool.poetry]
+name = "hot-swapping-models"
+version = "0.1.0"
+description = "Demo for PyconGR 2025"
+authors = ["Stavros Niafas"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "2.0.3"
+numpy = "1.24.3"
+loguru = "^0.7.2"
+python-dotenv = "^1.0.1"
+requests = "~=2.32.3"
+mlflow = "2.22.0"
+boto3 = "^1.38.2"
+scikit-learn = "^1.3.1"
+cffi = "^1.15.1"
+
+
+[tool.poetry.dev-dependencies]
+matplotlib = "^3.4.2"
+jupyterlab = "3.6.8"
+ruff = "*"
+ipython = "8.5.0"
+
+[tool.ruff]
+line-length = 119
+target-version = "py310"
+include = ["*.py", "*.pyi", "**/pyproject.toml", "*.ipynb"]
+exclude = [
+    ".git",
+    ".mypy_cache",
+    ".ipynb_checkpoints",
+    ".ruff_cache",
+    ".venv",    
+    ".vscode",
+    "127.0.0.1:5000",
+    "cicd",
+    "datataset",
+    "docs/_ext",
+    "hooks",
+    "logs",
+    "mlruns",
+    "notebooks",
+    "results",
+    "__pycache__",    
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
